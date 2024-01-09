@@ -267,7 +267,8 @@ You may supply up to 7 parameters (std is)\n\
 
     //Cgreate the grid
     Circle grid(0, 0, gridRadius);
-    Rect mapArea(outerSquare(grid));
+    Rect gridArea(outerSquare(grid));
+    Rect mapArea(1.1 * gridArea.tl, 1.1 * gridArea.br);
     PointMap<double> map(mapArea, 50, 50);
 
     //Variables fot the physics simulation
